@@ -94,13 +94,24 @@ function getFormValue(event) {
   if (formData.get("login") != "" && formData.get("password") != ""){
     isAuthorized = true;
     loginBtn.classList.remove("_active");
+    loginBtn.classList.add("_padding");
     loginForm.classList.remove("_active");
     loginBtnUser.querySelector(".email").textContent = formData.get("login");
     loginBtnUser.querySelector(".name").textContent = "Новый пользователь";
-    loginBtn.style.paddingLeft = "0";
   }
 }
 loginForm.addEventListener("submit", getFormValue);
+
+//Выход из акаунта
+let exitAccount = document.getElementById("exit");
+exitAccount.onclick = () => {
+  isAuthorized = false;
+  loginBtn.classList.remove("_active");
+  loginBtn.classList.remove("_padding");
+  loginAccount.classList.remove("_active");
+  loginBtnUser.querySelector(".email").textContent = "";
+  loginBtnUser.querySelector(".name").textContent = "";
+}
 
 //В закладки
 let bookmark = document.querySelector(".header .site-menu__bookmark");
