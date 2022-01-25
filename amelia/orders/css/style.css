@@ -591,15 +591,6 @@ body._locked {
   height: 15px;
 }
 
-.page__table tbody tr._active td:first-child {
-  width: 100px;
-}
-
-.page__table tbody tr._active td:last-child {
-  width: 80px;
-  text-align: left;
-}
-
 .page__table tbody tr._active td:nth-child(1) {
   text-decoration: underline;
 }
@@ -614,6 +605,15 @@ body._locked {
   line-height: 20px;
   font-weight: 400;
   color: #2b2c33;
+}
+
+.page__table tbody td:first-child {
+  width: 100px;
+}
+
+.page__table tbody td:last-child {
+  width: 80px;
+  text-align: left;
 }
 
 .page__table tbody td:first-child {
