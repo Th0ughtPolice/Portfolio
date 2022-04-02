@@ -96,22 +96,6 @@ h6 {
 
 /*Брейк поинты-----------------------------------------*/
 
-/*Фоновая картинка---------------------------------------*/
-
-.ibg {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -100;
-}
-
-.ibg img {
-  display: none;
-}
-
 /*Заголовки-----------------------------------------*/
 
 h2 {
@@ -450,6 +434,10 @@ body._locked {
   margin-top: 0;
 }
 
+.subscribe__form .inputs .input-group input:focus {
+  border: 1px solid #0B0A0D;
+}
+
 .subscribe__form .submit {
   width: 141px;
   height: 50px;
@@ -460,13 +448,13 @@ body._locked {
 }
 
 .subscribe__form .submit:hover {
-  background-color: #312F35;
-  color: white;
+  border: 1px solid #0B0A0D;
 }
 
 /*Подвал страницы-----------------------------------------*/
 
 .footer {
+  overflow: hidden;
   color: white;
   background-color: #312F35;
   padding: 55px 0 80px 0;
@@ -518,6 +506,13 @@ body._locked {
 .footer__socmedia a svg {
   width: 28px;
   height: 28px;
+}
+
+#vk path,
+#facebook path,
+#tiktok path,
+#youtube path {
+  fill: white;
 }
 
 @media (min-width: 768px) {
