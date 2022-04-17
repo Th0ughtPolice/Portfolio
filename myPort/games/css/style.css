@@ -300,7 +300,7 @@ body._locked {
 }
 
 .page .github a {
-  color: darkviolet;
+  color: white;
   padding-left: 5px;
 }
 
@@ -313,17 +313,13 @@ body._locked {
 }
 
 .page .game-group .game {
+  margin-top: 30px;
   height: 178px;
-  margin-top: 20px;
-  color: black;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 10px;
-}
-
-.page .game-group .game:first-child {
-  margin-top: 0;
 }
 
 .page .game-group .game__image {
@@ -429,6 +425,26 @@ body._locked {
     text-decoration: underline;
   }
 
+  .page .game-group .game {
+    padding-top: 40px;
+    border-top: 1px solid black;
+  }
+
+  .page .game-group .game:last-child {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .page .game-group .game:last-child:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+  }
+
   .page .game-group .game__image:after {
     content: "";
     position: absolute;
@@ -442,6 +458,19 @@ body._locked {
 @media (max-width: 1260px) {
   .container {
     max-width: 1030px;
+  }
+
+  .page .game-group .game {
+    margin-top: 10px;
+    padding-top: 20px;
+  }
+
+  .page .game-group .game:last-child {
+    margin-bottom: 10px;
+  }
+
+  .page .game-group .game:last-child:after {
+    bottom: -10px;
   }
 }
 
@@ -499,7 +528,10 @@ body._locked {
             flex-direction: column;
     height: 300px;
     max-width: 300px;
-    margin: 20px auto 0 auto;
+    margin: 30px auto 0 auto;
+    background-color: black;
+    -webkit-box-shadow: 2px 2px 5px 5px black;
+            box-shadow: 2px 2px 5px 5px black;
   }
 
   .page .game-group .game__description {
